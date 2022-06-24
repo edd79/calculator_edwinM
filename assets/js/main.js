@@ -1,34 +1,24 @@
 // *** Write your code here***
-// const numbers = document.querySelectorAll("[data-number]")
-// const operations = document.querySelectorAll("[data-operation]")
-// const equals = document.querySelector("[data-equals]")
-// const delete1 = document.querySelectorAll("[data-delete]")
-// const clearAll = document.querySelectorAll("[data-clear]")
-//const disp = document.getElementsByName("displayResult")
+//clear the display
+function empty() {
+    document.querySelector("#displayResult").value = ''
 
-function clear() {
-    document.getElementById("displayResult").reset()
 }
+//delete last digit
 
 function deletes() {
     let del = document.getElementById("displayResult")
     del.value = del.value.substring(0, del.value.length - 1)
 }
 
-function appendNumber() {
-
-}
-
-function chooseOperation() {
-
-}
-
+//calculate
 function compute() {
     let num = document.getElementById("displayResult").value
     let calc = eval(num)
     document.getElementById("displayResult").value = calc
 }
 
+//display
 function updateDisplay(value) {
     document.getElementById("displayResult").value += value
 }
